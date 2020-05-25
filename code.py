@@ -24,7 +24,7 @@ def lw(bottom_model, num_classes):
     top_model = Dense(num_classes,activation='softmax')(top_model)
     return top_model
     
- from keras.models import Sequential
+from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation, Flatten, GlobalAveragePooling2D
 from keras.layers import Conv2D, MaxPooling2D, ZeroPadding2D
 from keras.layers.normalization import BatchNormalization
@@ -41,8 +41,8 @@ print(model.summary())
 
 from keras.preprocessing.image import ImageDataGenerator
 
-train_data_dir = '/ws/image/train/'
-validation_data_dir = '/ws/image/test/'
+train_data_dir = 'image/train/'
+validation_data_dir = '/image/test/'
 
 
 train_datagen = ImageDataGenerator(

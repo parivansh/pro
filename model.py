@@ -22,7 +22,7 @@ def lw(bottom_model, num_classes):
     top_model = Dense(num_classes,activation='softmax')(top_model)
     return top_model
     
- from keras.models import Sequential
+from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation, Flatten, GlobalAveragePooling2D
 from keras.layers import Conv2D, MaxPooling2D, ZeroPadding2D
 from keras.layers.normalization import BatchNormalization
@@ -39,8 +39,8 @@ print(model.summary())
 
 from keras.preprocessing.image import ImageDataGenerator
 
-train_data_dir = '/ws/image/train/'
-validation_data_dir = '/ws/image/test/'
+train_data_dir = 'image/train/'
+validation_data_dir = 'image/test/'
 
 
 train_datagen = ImageDataGenerator(
@@ -103,15 +103,3 @@ history = model.fit_generator(
     validation_data = validation_generator,
     validation_steps = nb_validation_samples // batch_size)
     
-from keras.models import load_model
-classifier = load_model('facemodel.h5')
-import PIL
-from PIL import Image
-im = Image.open("image/predict/George_W_Bush_0074.jpg")
-aim = im.resize((224,224))
-from keras.preprocessing import image
-aim = image.img_to_array(aim)
-import numpy as np
-image = np.expand_dims(aim, axis=0)
-result = classifier.predict(image)
-result
