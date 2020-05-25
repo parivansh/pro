@@ -22,8 +22,7 @@ def lw(bottom_model, num_classes):
     top_model = Dense(8,activation='relu')(top_model)
     top_model = Dense(num_classes,activation='softmax')(top_model)
     return top_model
-    
-from keras.models import Sequential
+
 from keras.layers import Dense, Dropout, Activation, Flatten, GlobalAveragePooling2D
 from keras.layers import Conv2D, MaxPooling2D, ZeroPadding2D
 from keras.layers.normalization import BatchNormalization
