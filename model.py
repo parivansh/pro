@@ -1,7 +1,4 @@
-import tensorflow
-import keras 
-import numpy
-import pandas
+import keras
 from keras.applications import MobileNet
 img_rows, img_cols = 224, 224 
 MobileNet = MobileNet(weights = 'imagenet', 
