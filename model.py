@@ -24,7 +24,7 @@ def lw(bottom_model, num_classes):
     return top_model
 
 
-from keras.layers import sequential
+
 from keras.layers import Dense, Dropout, Activation, Flatten, GlobalAveragePooling2D
 from keras.layers import Conv2D, MaxPooling2D, ZeroPadding2D
 from keras.layers.normalization import BatchNormalization
