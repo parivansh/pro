@@ -41,8 +41,8 @@ print(model.summary())
 
 from keras.preprocessing.image import ImageDataGenerator
 
-train_data_dir = 'image/train/'
-validation_data_dir = 'image/test/'
+train_data_dir = '/ws/image/train/'
+validation_data_dir = '/ws/image/test/'
 
 
 train_datagen = ImageDataGenerator(
